@@ -16,8 +16,8 @@ function bs() {
     watch("src/js/*.js").on('change', browserSync.reload);
 };
 
-function serveSass(){
-  return src("./sass/*.sass")
+function serveSass() {
+  return src("src/sass/*.sass")
     .pipe(sass())
     .pipe(dest("src/css"))
     .pipe(browserSync.stream());
