@@ -409,6 +409,7 @@ body {
   justify-content: center;
   padding-top: 100px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  min-width: 370px;
   height: 100vh;
   color: #ffffff; }
   .hero::before {
@@ -509,7 +510,9 @@ body {
   .hero__content {
     margin-left: 0; } }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 14px; }
   .contacts__phone {
     margin-right: 0;
     color: #ffffff;
@@ -517,17 +520,16 @@ body {
   .contacts__button {
     display: none; }
   .title {
-    font-size: 1.64rem; }
+    font-size: 1.64rem;
+    font-weight: normal; }
   .hero__scroll-down {
     display: none; }
-  .hero__content {
-    min-width: 22.86rem; }
   .hero__text {
     font-size: 1.29rem;
     margin-bottom: 2.28rem; }
   .hero__button {
     display: block;
-    min-width: 22.86rem;
+    width: 100%;
     margin-bottom: 1.85rem; } }
 
 @media screen and (max-height: 520px) {
