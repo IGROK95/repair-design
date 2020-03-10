@@ -522,6 +522,8 @@ body {
   .title {
     font-size: 1.64rem;
     font-weight: normal; }
+  .hero__content {
+    max-width: 22.86rem; }
   .hero__scroll-down {
     display: none; }
   .hero__text {
@@ -529,7 +531,7 @@ body {
     margin-bottom: 2.28rem; }
   .hero__button {
     display: block;
-    width: 100%;
+    min-width: 22.86rem;
     margin-bottom: 1.85rem; } }
 
 @media screen and (max-height: 520px) {
