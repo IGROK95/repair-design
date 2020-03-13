@@ -11,4 +11,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
   closeBtn.addEventListener('click', switchModal);
+
+
+  document.body.addEventListener('keyup', function (e) {
+    const key = e.keyCode;
+
+    if (key == 27) {
+        document.querySelector('.modal.modal--visible').classList.remove('modal--visible');
+    };
+}, false);
+
+
+  modal.addEventListener('click', function() {
+    document.querySelector('.modal.modal--visible').classList.remove('modal--visible');
+    this.classList.remove('modal--visible');
+});
 });
