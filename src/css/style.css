@@ -378,6 +378,18 @@ template {
     border-radius: 1px;
     margin-right: 0.64rem; }
 
+.scroll__up {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: none;
+  background: url("../img/arrow-down.svg") no-repeat center;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #E3B873;
+  border-radius: 50%;
+  transform: rotate(180deg); }
+
 .container {
   width: 85%;
   max-width: 1256px;

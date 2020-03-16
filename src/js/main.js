@@ -34,6 +34,7 @@ $(document).ready(function () {
     modalBtn = $('[data-toggle=modal]'),
     modalDialog = $('.modal__dialog')
     closeBtn = $('.modal__close');
+    scrollUp = $('.scroll__up')
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -56,5 +57,17 @@ $(document).ready(function () {
         $('.modal').removeClass('modal--visible');
     }
  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 300) {
+      scrollUp.fadeIn();
+    } else {
+      scrollUp.fadeOut();
+    }
+  });
+
+  scrollUp.click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 700);
+  });
 
 });
