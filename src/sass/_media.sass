@@ -12,16 +12,49 @@
       display: none
     &__content 
       margin-left: 0
-@media screen and ( max-width: 760px )
   .row 
     flex-direction: column
     align-items: center
+  .col-50 
+      width: 100%
+      margin-bottom: 40px
+  .projects
+    padding-top: 2rem
+    &__row
+        max-width: 100%
+        margin: auto
+@media screen and ( max-width: 760px )
+  .container 
+    width: 90%
   .types 
     &__card 
       margin-bottom: 5rem
   .card 
     &__text 
       margin-left: 0
+  .projects
+    padding-top: 2rem
+    padding-bottom: 0
+    &__row
+        max-width: 100%
+        margin: auto
+    &__swiper
+      &-slide
+        justify-content: flex-start
+        margin-bottom: 2rem
+        &__heading
+          font-size: 1.16rem
+          margin-bottom: 0.8rem
+  .swiper
+    &-slide
+      &__heading
+        font-size: 1.1rem
+        letter-spacing: 0.04rem
+        margin: 1.2rem 0 1rem 0
+      &__value
+        letter-spacing: 0.04rem
+      &__text
+        flex-basis: 47.5%
   .design 
     background-color: $dark
     &__title 
@@ -46,6 +79,8 @@
     font-size: 1.64rem
     font-weight: normal
   .hero
+    &::after
+      display: none
     &__content 
       max-width: 22.86rem
     &__scroll-down 
@@ -55,8 +90,19 @@
       margin-bottom: 2.28rem
     &__button 
       display: block
-      min-width: 22.86rem
+      width: 100%
       margin-bottom: 1.85rem
+  .section 
+    bottom: 36px 0
+    &-title
+      &__word 
+        &::after
+          display: none
+    &__text
+      max-width: 24rem
+      margin-top: 2rem
+      font-size: 1.167rem
+      line-height: 158.48%  
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
