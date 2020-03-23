@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
@@ -12,7 +13,7 @@
   <header class="header">
     <div class="container">
       <div class="menu">
-        <div class="logo menu__logo">Repair Design Project</div>
+        <div class="logo menu__logo wow fadeInRight">Repair Design Project</div>
         <nav class="nav menu__nav">
           <a href="#" class="nav__item">Главная</a>
           <a href="#" class="nav__item">Проекты</a>
@@ -31,19 +32,19 @@
   </header>
   <main>
     <section class="hero">
-      <div class="instagram hero__instagram">
+      <div class="instagram hero__instagram wow fadeInDown">
         <a href="#" class="instagram__link">instagram</a>
       </div>
       
       <div class="container">
         <div class="hero__content">
-          <h1 class="title hero__title">Турецкий ремонт 
+          <h1 class="title hero__title wow fadeInRight" data-wow-delay="0.1s">Турецкий ремонт 
             в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
-            <p class="hero__text">
+            <p class="hero__text wow fadeInRight" data-wow-delay="0.4s">
               Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы
             </p>
-            <button class="button hero__button button--primary" data-toggle="modal">Рассчитать стоимость</button>
-            <button class="button hero__button hero__button-size button--outline" data-toggle="modal">Отправить заявку</button>
+            <button class="button hero__button button--primary wow fadeInRight" data-toggle="modal" data-wow-delay="0.7s">Рассчитать стоимость</button>
+            <button class="button hero__button hero__button-size button--outline wow fadeInRight" data-toggle="modal" data-wow-delay="0.7s">Отправить заявку</button>
         </div>
           <!-- hero__content -->
       </div>
@@ -158,7 +159,7 @@
     <!-- /.section section--dark projects -->
     <section class="section control">
       <div class="container">
-        <div class="section-title">
+        <div class="section-title control__section-title section-title--light">
           <h2 class="section-title__heading">Онлайн контроль</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
@@ -167,6 +168,29 @@
           <!-- /.section-title__image -->
         </div>
         <!-- /.section-title -->
+        <div class="control__video video">
+          <img src="img/play-icon.svg" alt="play icon" class="video__play">
+        </div>
+        <!-- control__video video -->
+        <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
+
+        <form action="#" class="form control__form">
+          <div class="control__input-group control__input-group--mb">
+            <label for="user-name" class="label form__label control__label">Имя</label>
+            <input type="text" class="input form__input control__input" id="user-name" placeholder="Как вас зовут">
+          </div>
+          <div class="control__input-group">
+            <label for="user-phone" class="label form__label control__label">Телефон</label>
+            <input type="text" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона">
+          </div>
+         
+          <button class="button button--primary control__button">Отправить</button>
+          <div class="policy control__policy">
+            <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
+            <label for="policy-checkbox" class="policy__label control__policy-label">я соглашаюсь с обработкой данных</label>
+          </div>
+          <!-- /.policy -->
+        </form>
       </div>
       <!-- /.container -->
     </section>
@@ -184,7 +208,7 @@
         <!-- /.section-title -->
         <div class="row">
           <div class="col-30">
-            <div class="card types__card">
+            <div class="card types__card wow fadeInUp" data-wow-delay="0.7s">
               <img src="img/types/type-1.jpg" alt="" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Косметический ремонт</h3>
@@ -214,7 +238,7 @@
             </div>
           </div>
           <div class="col-30">
-            <div class="card types__card">
+            <div class="card types__card wow fadeInUp" data-wow-delay="0.5s">
               <img src="img/types/type-2.jpg" alt="" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Капитальный ремонт</h3>
@@ -244,7 +268,7 @@
             </div>
           </div>
            <div class="col-30">
-            <div class="card types__card">
+            <div class="card types__card wow fadeInUp" data-wow-delay="0.3s">
               <img src="img/types/type-3.jpg" alt="" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Дизайнерский ремонт</h3>
@@ -295,7 +319,7 @@
         </div>
         <div class="row design__row">
           <div class="col-30">
-            <div class="card design__card">
+            <div class="card design__card wow fadeInDown" data-wow-delay="0.1s">
               <img src="img/design/design-1.jpg" alt="" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Минимальный</h3>
@@ -319,7 +343,7 @@
             </div>
           </div>
           <div class="col-30">
-            <div class="card design__card">
+            <div class="card design__card wow fadeInUp" data-wow-delay="0.2s">
               <img src="img/design/design-2.jpg" alt="" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Стандартный</h3>
@@ -348,7 +372,7 @@
             </div>
           </div>
            <div class="col-30">
-            <div class="card design__card">
+            <div class="card design__card wow fadeInDown" data-wow-delay="0.3s">
               <img src="img/design/design-3.jpg" alt="" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Полный</h3>
@@ -402,11 +426,11 @@
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="#" class="form modal__form">
         <label for="user-name" class="label form__label label--light">Имя</label>
-        <input type="text" class="input form__input modal__input" id="user-name" placeholder="Как вас зовут">
+        <input type="text" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут">
         <label for="user-phone" class="label form__label label--light">Телефон</label>
-        <input type="text" class="input form__input modal__input" id="user-phone" placeholder="Ваш номер телефона">
+        <input type="text" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона">
         <label for="user-email" class="label form__label label--light">Email</label>
-        <input type="email" class="input form__input modal__input" id="user-email" placeholder="Ваш email">
+        <input type="email" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email">
         <div class="policy modal__policy">
           <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
           <label for="policy-checkbox" class="policy__label">я соглашаюсь с обработкой данных</label>
@@ -421,6 +445,7 @@
   <a href="#" class="scroll__up show"></a>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -34,7 +34,7 @@
       margin-left: 0
   .projects
     padding-top: 2rem
-    padding-bottom: 0
+    // padding-bottom: 0
     &__row
         max-width: 100%
         margin: auto
@@ -92,6 +92,36 @@
       display: block
       width: 100%
       margin-bottom: 1.85rem
+  .projects
+    padding-bottom: 0
+  .control 
+    background-color: $dark
+    padding-top: 1px
+    &__video 
+      box-shadow: none
+    &__section-title
+      margin-top: 1rem
+    &__text 
+      color: $light
+      font-size: 1rem
+    &__form 
+      flex-direction: column
+    &__input-group--mb
+      margin-bottom: 4.5rem
+    &__policy-label 
+      justify-content: start
+    &__label 
+      color: rgba(255, 255, 255, 0.5)
+    &__input
+      &::placeholder 
+        color: $light
+    &__policy-label 
+      color: $light
+    &__button 
+      order: 4
+      margin-top: 4.428rem
+      margin-bottom: -6rem
+      width: 100%
   .section 
     bottom: 36px 0
     &-title
