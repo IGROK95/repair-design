@@ -15,14 +15,20 @@
   .row 
     flex-direction: column
     align-items: center
-  .col-50 
-      width: 100%
-      margin-bottom: 40px
+  .col
+    &-50 
+    width: 100%
+    margin-bottom: 40px
+  .card 
+    margin-bottom: 6rem
   .projects
     padding-top: 2rem
     &__row
         max-width: 100%
         margin: auto
+  .design 
+    &__card 
+      margin-bottom: 6rem
 @media screen and ( max-width: 760px )
   .container 
     width: 90%
@@ -34,7 +40,6 @@
       margin-left: 0
   .projects
     padding-top: 2rem
-    // padding-bottom: 0
     &__row
         max-width: 100%
         margin: auto
@@ -61,8 +66,6 @@
       color: $light
     &__subtitle 
       color: $light
-    &__card 
-      margin-bottom: 6rem
     &__pricetag 
       padding: 1.214rem 5rem 1.214rem 4rem
 @media screen and ( max-width: 576px )
@@ -132,7 +135,14 @@
       max-width: 24rem
       margin-top: 2rem
       font-size: 1.167rem
-      line-height: 158.48%  
+      line-height: 158.48%
+  .footer
+    &__input-group
+      flex-basis: 100%
+    &__policy
+      flex-basis: auto
+    &__button
+      width: 100%
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down

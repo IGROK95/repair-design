@@ -369,7 +369,8 @@ template {
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.142rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -377,6 +378,14 @@ template {
     border: 1px solid #E3B873;
     border-radius: 1px;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
+
+div.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
 
 .scroll__up {
   position: fixed;
@@ -660,6 +669,9 @@ img {
 .control__label {
   margin-bottom: -7px; }
 
+.control__input {
+  color: #131313; }
+
 .control__button {
   padding: 1.2857rem 4.7857rem; }
 
@@ -714,11 +726,12 @@ img {
   .card__pricetag sup {
     font-size: 0.6rem; }
 
-.design__row {
-  margin-top: 2.78rem; }
-
-.design__pricetag {
-  padding: 1.214rem 6rem 1.214rem 2.4rem; }
+.design {
+  padding-bottom: 30rem; }
+  .design__row {
+    margin-top: 2.78rem; }
+  .design__pricetag {
+    padding: 1.214rem 6rem 1.214rem 2.4rem; }
 
 .modal {
   opacity: 0;
@@ -763,10 +776,12 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.428rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+  .modal__input:last-of-type {
+    margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
@@ -814,6 +829,51 @@ img {
   .projects__swiper-button-next {
     background: url("../img/arrow-next.svg") no-repeat center; }
 
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding-top: 3rem; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    margin-top: -20rem;
+    margin-bottom: 3.714rem;
+    padding: 2.5rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.428rem;
+    text-align: center;
+    margin-bottom: 3.214rem;
+    margin-top: 0; }
+  .footer__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.185rem 4.185rem;
+    font-size: 1.150rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -830,14 +890,18 @@ img {
   .row {
     flex-direction: column;
     align-items: center; }
-  .col-50 {
+  .col {
     width: 100%;
     margin-bottom: 40px; }
+  .card {
+    margin-bottom: 6rem; }
   .projects {
     padding-top: 2rem; }
     .projects__row {
       max-width: 100%;
-      margin: auto; } }
+      margin: auto; }
+  .design__card {
+    margin-bottom: 6rem; } }
 
 @media screen and (max-width: 760px) {
   .container {
@@ -871,8 +935,6 @@ img {
       color: #ffffff; }
     .design__subtitle {
       color: #ffffff; }
-    .design__card {
-      margin-bottom: 6rem; }
     .design__pricetag {
       padding: 1.214rem 5rem 1.214rem 4rem; } }
 
@@ -946,7 +1008,13 @@ img {
       max-width: 24rem;
       margin-top: 2rem;
       font-size: 1.167rem;
-      line-height: 158.48%; } }
+      line-height: 158.48%; }
+  .footer__input-group {
+    flex-basis: 100%; }
+  .footer__policy {
+    flex-basis: auto; }
+  .footer__button {
+    width: 100%; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
