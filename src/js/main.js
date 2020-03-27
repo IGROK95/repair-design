@@ -142,4 +142,50 @@ $(document).ready(function () {
   // маска для телефона
 
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [43.339930, 46.100435],
+            zoom: 9
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Наш офис',
+            balloonContent: 'Вход со двора'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/marker.png',
+            // Размеры метки.
+            iconImageSize: [32, 32],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+        myMap.behaviors
+        // Отключаем часть включенных по умолчанию поведений:
+        //  - drag - перемещение карты при нажатой левой кнопки мыши;
+        //  - magnifier.rightButton - увеличение области, выделенной правой кнопкой мыши.
+        .disable(['scrollZoom'])
+        // Включаем линейку.
+        .enable('ruler');
+
+    // Изменяем свойство поведения с помощью опции:
+    // изменение масштаба колесом прокрутки будет происходить медленно,
+    // на 1/2 уровня масштабирования в секунду.
+    myMap.options.set('scrollZoomSpeed', 0.5);
+
+    myMap.geoObjects
+        .add(myPlacemark);
+  });
 });
