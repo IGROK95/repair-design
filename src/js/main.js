@@ -1,9 +1,11 @@
 $(document).ready(function () {
   var modal = $('.modal'),
     modalBtn = $('[data-toggle=modal]'),
-    modalDialog = $('.modal__dialog')
-    closeBtn = $('.modal__close');
-    scrollUp = $('.scroll__up')
+    modalDialog = $('.modal__dialog'),
+    closeBtn = $('.modal__close'),
+    scrollUp = $('.scroll__up'),
+    modalSuccess = $('.modal__success'),
+    successClose = $('.modal__success-close');
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -13,8 +15,16 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
 
+  successClose.on('click', function () {
+    modalSuccess.toggleClass('modal__success--visible');
+  });
+
   modal.on('click', function () {
     modal.toggleClass('modal--visible');
+  });
+
+  modalSuccess.on('click', function () {
+    modalSuccess.toggleClass('modal__success--visible');
   });
 
   modalDialog.on('click', function (e) {
@@ -24,6 +34,7 @@ $(document).ready(function () {
   $(document).keyup(function(event){
     if(event.which=='27'){
         $('.modal').removeClass('modal--visible');
+        $('.modal__success').removeClass('modal__success--visible');
     }
  });
 
@@ -63,6 +74,7 @@ $(document).ready(function () {
   // Валидация форм
   $('.modal__form').validate({
     errorClass: "invalid",
+    errorElement: "div",
     rules: {
       // строчное правило
       userName: {
@@ -75,9 +87,11 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+
+      policyCheckbox: "required",
     }, // собщение
-    errorElement: "div",
+    
     messages: {
       userName: {
         required: "Имя обязательно",
@@ -89,6 +103,18 @@ $(document).ready(function () {
         required: "Обязательно укажите email",
         email: "Введите в формате: name@domain.com"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modal.removeClass('modal--visible');
+          modalSuccess.toggleClass('modal__success--visible');
+        }
+      });
     }
   });
   $('.control__form').validate({
@@ -101,6 +127,7 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
+      policyCheckbox: "required",
       // правило-объект
     }, // собщение
     errorElement: "div",
